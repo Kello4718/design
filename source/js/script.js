@@ -333,7 +333,10 @@ const portfolioFirstSwiper = new Swiper('.portfolio__swipers-first-swiper', {
     freeMode: true,
     centeredSlides: true,
     direction: 'vertical',
-    mousewheel: true,
+    mousewheel: {
+        enabled: true,
+        sensitivity: 2,
+    },
     slidesPerView: 1.75,
     spaceBetween: 30,
 })
@@ -342,7 +345,10 @@ const portfolioSecondSwiper = new Swiper('.portfolio__swipers-second-swiper', {
     freeMode: true,
     centeredSlides: true,
     direction: 'vertical',
-    mousewheel: true,
+    mousewheel: {
+        enabled: true,
+        sensitivity: 2,
+    },
     slidesPerView: 1.75,
     spaceBetween: 30,
 })
@@ -351,7 +357,10 @@ const portfolioThirdSwiper = new Swiper('.portfolio__swipers-third-swiper', {
     freeMode: true,
     centeredSlides: true,
     direction: 'vertical',
-    mousewheel: true,
+    mousewheel: {
+        enabled: true,
+        sensitivity: 2,
+    },
     slidesPerView: 1.75,
     spaceBetween: 30,
 })
@@ -360,50 +369,12 @@ const portfolioFourthSwiper = new Swiper('.portfolio__swipers-fourth-swiper', {
     freeMode: true,
     centeredSlides: true,
     direction: 'vertical',
-    mousewheel: true,
+    mousewheel: {
+        enabled: true,
+        sensitivity: 2,
+    },
     slidesPerView: 1.75,
     spaceBetween: 30,
 })
 
 bindSwipers(portfolioFirstSwiper, portfolioSecondSwiper, portfolioThirdSwiper, portfolioFourthSwiper);
-
-const previewSwiper = new Swiper('.preview__swiper', {
-    loop: false,
-
-    speed: 1800,
-    centeredSlides: true,
-
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-    },
-
-    mousewheel: {
-        sensitivity: 1.8,
-        eventsTarget: '.swiper',
-    },
-
-    // autoplay: {
-    //     delay: 1800,
-    //     stopOnLastSlide: true,
-    //     disableOnInteraction: true,
-    //    },
-
-    simulateTouch: false,
-    grapCursor: true,
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-        },
-
-        1024: {
-            slidesPerView: 3,
-        },
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-})
